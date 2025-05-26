@@ -1,1 +1,0 @@
-web: mkdir -p database storage/logs storage/framework/cache storage/framework/sessions storage/framework/views && touch database/database.sqlite && chmod 664 database/database.sqlite && chmod -R 775 storage bootstrap/cache && php artisan config:clear && php artisan cache:clear && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT

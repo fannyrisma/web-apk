@@ -10,11 +10,15 @@ class PageController extends Controller
 {
     public function index()
     {
-        // Mengambil 3 artikel terbaru
-        $latestPosts = Post::latest()->take(3)->get();
+        // Komentar kode yang mencoba mengakses database
+        // $latestPosts = Post::latest()->take(3)->get();
         
-        // Menghitung jumlah mahasiswa
-        $studentCount = Student::count(); // Ini yang menyebabkan error jika model Student belum ada
+        // Gunakan data dummy sementara
+        $latestPosts = [];
+        
+        // Komentar kode yang mencoba menghitung jumlah mahasiswa
+        // $studentCount = Student::count();
+        $studentCount = 0;
         
         // Mengirim data ke view welcome.blade.php
         return view('welcome', [
@@ -41,6 +45,7 @@ class PageController extends Controller
     
     // Method lainnya...
 }
+
 
 
 
